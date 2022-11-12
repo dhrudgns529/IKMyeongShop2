@@ -161,13 +161,23 @@
     flex-wrap: wrap;
     width: 100%;
     margin-top: 10px;
+
     cursor: pointer;
 }
 
 .goods-product {
+    width: 23.3%;
     padding: 0px 10px 37px;
 }
 
+.product-img {
+    width: 100%;
+}
+
+.product-img img {
+    width: 100%;
+    height: 100%;
+}
 .product-name, .product-price {
     text-align: center;
 }

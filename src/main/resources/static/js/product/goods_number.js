@@ -186,7 +186,7 @@ class GoodsService {
             goodProducts.innerHTML += `
             <li class="goods-product">
                 <div class="product-img">
-                    <img src="/static/img/goods/goods_list/cup.jpg">
+                    <img src="/static/upload/product/${product.mainImg}">
                 </div>
                 <div class="product-name">${product.productName}</div>
                 <div class="product-price">${product.productPrice}</div>

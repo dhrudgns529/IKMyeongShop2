@@ -30,6 +30,9 @@ public class ProductServiceImpl implements ProductService{
         map.put("limitCount", limitCount);
 
         productRepository.getProductList(map).forEach(goodsProduct -> {
+            if (goodsProduct.getSave_name() == null) {
+                goodsProduct.setSave_name("NoImage.png");
+            }
             productList.add(goodsProduct.toDto());
         });
         return productList;
