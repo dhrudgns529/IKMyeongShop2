@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.study.ikmyeongshopteam4.repository.admin.ProductManagementRepository">
+    <resultMap id="product_img_files" type="com.study.ikmyeongshopteam4.domain.ProductImgFile">
+        <result property="id" column="img_id"/>
+        <result property="pdt_id" column="product_id"/>
+        <result property="origin_name" column="origin_name"/>
+        <result property="save_name" column="save_name"/>
+    </resultMap>
+    <resultMap id="product_info" type="com.study.ikmyeongshopteam4.domain.admin.ProductInfo">
+        <result property="id" column="id"/>
+        <result property="pdt_name" column="pdt_name"/>
+        <result property="category_name" column="category_name"/>
+        <result property="pdt_dtl_id" column="pdt_dtl_id"/>
+        <result property="pdt_price" column="pdt_price"/>
+        <result property="pdt_design" column="pdt_design"/>
+        <result property="pdt_stock" column="pdt_stock"/>
+        <result property="create_date" column="create_date"/>
+        <result property="update_date" column="update_date"/>
+        <collection property="product_img_files" javaType="list" resultMap="product_img_files"/>
+    </resultMap>
+
+    <update id="setProduct" parameterType="com.study.ikmyeongshopteam4.domain.Product">
+        update
+            pdt_mst
+        set
+            pdt_price = #{pdt_price},
+            update_date = now()
+        where
+            id = #{id}
+    </update>
+
+    <update id="setProductDetail" parameterType="com.study.ikmyeongshopteam4.domain.ProductDetail">
+        update
+            pdt_dtl
+        set
+            pdt_design = #{pdt_design},
+            pdt_stock = #{pdt_stock},
+            update_date = now()
+        where
+            id = #{pdt_id}
+    </update>
+    <delete id="deleteImgFiles" parameterType="hashmap">
+        delete
+        from
+            pdt_image_mst
+        where
+            pdt_Id = #{pdtId}
+        and save_name in
+        <foreach collection="deleteImgFiles" item="save_name" open="(" separator="," close=")">
+            #{save_name}
+        </foreach>
+    </delete>
+
+
+    <select id="getCategoryList" resultType="com.study.ikmyeongshopteam4.domain.admin.ProductCategory">
+        select
+            id,
+            category_name
+        from
+            pdt_category_mst
+        order by(id)
+    </select>
+    <select id="findProductByProductName" resultType="java.lang.Integer">
+        select
+            count(*)
+        from
+            pdt_mst
+        where
+            pdt_name = #{pdtName}
+    </select>
+    <select id="findProductId" resultType="com.study.ikmyeongshopteam4.domain.Product">
+        select
+            *
+        from
+            pdt_mst
+        where
+            pdt_name = #{pdtName}
+    </select>
+    <select id="findProductDesign" resultType="java.lang.Integer">
+        select
+            count(*)
+        from
+            pdt_dtl
+        where
+            pdt_id = #{pdtId}
+    </select>
+
+    <select id="getProduct" parameterType="java.util.List" resultMap="product_info">
+        SELECT
+            pm.id,
+            pm.pdt_name,
+            pcm.category_name,
+            pd.id as pdt_dtl_id,
+            pm.pdt_price,
+            pd.pdt_design,
+            pd.pdt_stock,
+            pd.create_date,
+            pd.update_date,
+            pim.id as img_id,
+            pim.pdt_id as product_id,
+            pim.origin_name,
+            pim.save_name
+        FROM
+            pdt_mst pm
+            LEFT OUTER JOIN pdt_dtl pd ON(pd.pdt_id = pm.id)
+            LEFT OUTER JOIN pdt_category_mst pcm ON(pcm.id = pm.category_id)
+            LEFT OUTER JOIN pdt_image_mst pim ON(pim.pdt_id = pm.id)
+        WHERE
+            pd.pdt_design = #{pdtDesign}
+        and
+            pd.pdt_id = #{pdtId}
+    </select>
+
+    <insert id="saveProduct" parameterType="com.study.ikmyeongshopteam4.domain.Product" useGeneratedKeys="true" keyProperty="id">
+        insert into
+            pdt_mst
+        values (
+            0,
+            #{pdt_name},
+            #{category_id},
+            #{pdt_price},
+            now(),
+            now()
+        );
+    </insert>
+    <insert id="saveProductDetail">
+        insert into
+            pdt_dtl
+        values (
+            0,
+            #{pdt_id},
+            #{pdt_design},
+            #{pdt_stock},
+            now(),
+            now()
+        );
+    </insert>
+    <insert id="saveImgFiles" parameterType="java.util.List">
+        insert into
+            pdt_image_mst
+        values
+            <foreach collection="list" item="img" separator=",">
+                (
+                0,
+                #{img.pdt_id},
+                #{img.origin_name},
+                #{img.save_name},
+                now(),
+                now()
+                )
+            </foreach>
+    </insert>
+
+</mapper>

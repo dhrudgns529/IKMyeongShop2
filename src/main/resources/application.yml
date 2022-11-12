@@ -1,0 +1,45 @@
+server:
+  port: 8000
+
+spring:
+  mvc:
+    static-path-pattern: /static/**
+
+  security:
+    user:
+      name: test@naver.com
+      password: 1q2w3e4r
+    oauth2:
+      client:
+        registration:
+          google:
+            clientId: 251871285790-h7d2eodrkfgsmfkvg0i3tjafm7g8ceqg.apps.googleusercontent.com
+            clientSecret: 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
+            scope:
+              - email
+              - profile
+          naver:
+            clientId: xdtU7vYkVzuEIQ4ApEnF
+            clientSecret: LDZ1fqb7yU
+            scope:
+              - email
+              - name
+            clientName: Naver
+            authorizationGrantType: authorization_code
+            redirectUri: http://localhost:8000/login/oauth2/code/naver
+        provider:
+          naver:
+            authorizationUri: https://nid.naver.com/oauth2.0/authorize
+            tokenUri: https://nid.naver.com/oauth2.0/token
+            userInfoUri: https://openapi.naver.com/v1/nid/me
+            userNameAttribute: response
+
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://database-study.cvyhp6qkgzwg.ap-northeast-2.rds.amazonaws.com:3306/ikmyeongshop
+    username: admin
+    password: 1q2w3e4r!
+
+mybatis:
+  mapper-locations:
+    - /mappers/*.xml

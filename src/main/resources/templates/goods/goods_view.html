@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>익명이 캐릭터 공식쇼핑몰 익명상점
+    </title>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <link rel="stylesheet" href="/static/css/goods/goods_view.css">
+    <link rel="stylesheet" href="/static/css/header.css">
+    <link rel="stylesheet" href="/static/css/reset.css">
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div id="top">
+                <div class="sns">
+                    <ul>
+                        <li><a href="https://www.facebook.com/ikmyeongshop" target="_blank"><img
+                                    src="/static/img/header/top_btn_sns1.png" alt=""></a></li>
+                        <li><a href="https://www.instagram.com/anonymous_ikmsang/" target="_blank"><img
+                                    src="/static/img/header/top_btn_sns2.png" alt=""></a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="/account/login">로그인</a></li>
+                        <li><a href="/account/register">회원가입</a></li>
+                        <li><a href="/order/cart">장바구니0</a></li>
+                        <li><a href="/mypage/index">마이페이지</a></li>
+                        <li><a href="#">고객센터</a></li>
+                        <li><a href="#"><img src="/static/img/header/top_btn_search.png" alt=""></a></li>
+                    </ul>
+                </div>
+                <div class="logo">
+                    <a href="#"><img src="/static/img/header/event_left.png" alt=""></a>
+                    <a href="/index"><img src="/static/img/header/logo.png" alt=""></a>
+                    <a href="#"><img src="/static/img/header/event_right.png" alt=""></a>
+                </div>
+                <nav class="nav">
+                    <ul>
+                      <li><a href="/goods/DOll">DOLL</a></li>
+                      <li><a href="/goods/FIGURE&TOY">FIGURE & TOY</a></li>
+                      <li><a href="/goods/FANCY">FANCY</a></li>
+                      <li><a href="/goods/ACCESSORY">ACCESSORY</a></li>
+                      <li><a href="/goods/LIVING">LIVING</a></li>
+                      <li><a href="/goods/KITCHEN&BATHROOM">KITCHEN & BATHROOM</a></li>
+                      <li><a href="/goods/MOBILE">MOBILE</a></li>
+                      <li><a href="/goods/깨꾹이">깨꾹이</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div class="goods_view_top">
+                <div class="location_warp">
+                    <div class="location_cont">
+                        <em>
+                            <a href="#" class="local_home">HOME</a>
+                            <span>></span>
+                            <select>
+                                <option value="">DOLL</option>
+                                <option value="">FIGURE & TOY</option>
+                                <option value="">FANCY</option>
+                                <option value="">ACCESSORY</option>
+                                <option value="">LIVING</option>
+                                <option value="">KITCHEN & BATHROOM</option>
+                                <option value="">MOBILE</option>
+                                <option value="">깨꾹이</option>
+                            </select>
+                            <!-- <div class="location_select">
+                                <a href="#">
+                                    <span>KITCHEN & BATHROOM</span>
+                                </a>
+                            </div> -->
+                        </em>
+                    </div>
+                    <div class="item_photo_info_sec">
+                        <div class="item_photo_view">
+                            <!-- <div class="item_photo">
+                                <img src="/static/img/goods/goods_view/cup.jpg" alt="">
+                                <div class="slick-list.draggable">
+                                    <div class="mini_img">
+                                        <img class="img_cl" src="/static/img/goods/goods_view/cup_min.jpg" alt="cup">
+                                    </div>
+                                </div>
+                            </div> -->
+                        </div>
+                        <div class="item_info_box">
+                            <div class="item_detail_tit">
+                                <h3 class="goods-title"></h3>
+                            </div>
+                            <div class="item_detail_list">
+                                <dl class="item_price">
+                                    <dt>판매가</dt>
+                                    <dd class="goods-price">
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt>구매제한</dt>
+                                    <dd>최소 1개</dd>
+                                </dl>
+                                
+                                <dl class="item_delivery">
+                                    <dt class="baesong">배송비</dt>
+                                    <dd class="dd1">
+                                        2,500원 / 주문시결제(선결제)
+                                        <span class="btn_layer">
+                                            <span class="btn_gray_list">
+                                                <a href="javascript:void(0)" class="btn_gray_small">
+                                                    <em>조건별배송</em>
+                                                </a>
+                                            </span>
+                                            <div id="lyDelivery" class="layer_area layer_area_invisible">
+                                                <div class="ly_wrap_delivery_layer">
+                                                    <div class="ly_tit">금액별배송비</div>
+                                                    <div class="ly_cont">
+                                                        <div class="delivery_list">
+                                                            <ul>
+                                                                <li>
+                                                                    0원 이상 ~ 50,000원 미만
+                                                                    <span>2500원</span>
+                                                                </li>
+                                                                <li>
+                                                                    50,000원 이상
+                                                                    <span>0원</span>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <p class="chk_none">
+                                                            배송비 계산 기준 : 판매가 + 옵션가 + 추가상품가 +
+                                                            텍스트옵션가 - 상품할인가 - 상품쿠폰할인가
+                                                        </p>
+                                                    </div>
+                                                    <a href="#lyDelivery" class="ly_close">
+                                                        <img src="/static/img/goods/goods_view/close.png" alt="닫기">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </span>
+                                        <span class="btn_layer">
+                                            <span class="btn_gray_list">
+                                                <a href="javascript:void(0)" class="btn_gray_small">
+                                                    <em>지역별추가배송지</em>
+                                                </a>
+                                            </span>
+                                            <div id="lyDeliveryZone" class="layer_area layer_area_invisible">
+                                                <div class="ly_wrap_delivery_zone_layer">
+                                                    <div class="ly_tit">
+                                                        <strong>지역별배송비</strong>
+                                                    </div>
+                                                    <div class="ly_cont">
+                                                        <div class="delivery_list">
+                                                            <ul>
+                                                                <li>
+                                                                    제주특별자치도 서귀포시
+                                                                    <span>2,000원</span>
+                                                                </li>
+                                                                <li>
+                                                                    제주특별자치도 제주시
+                                                                    <span>2,000원</span>
+                                                                </li>
+                                                                <li>
+                                                                    경상북도 울릉군
+                                                                    <span>5,000원</span>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <a href="#lyDelivery" class="ly_close">
+                                                        <img src="/static/img/goods/goods_view/close.png" alt="닫기">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </span>
+                                        <div class="delivery_detail">
+                                            <div class="delivery_division">택배</div>
+                                        </div>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt>상품코드</dt>
+                                    <dd class="goods-code"></dd>
+                                </dl>
+                                <dl>
+                                    <dt>상품재고</dt>
+                                    <dd class="product-stock"></dd>
+                                </dl>
+                                <div class="item_add_option_box">
+                                    <dl>
+                                        <dt>디자인</dt>
+                                        <dd>
+                                            <select class="option_bar">
+                                                <!-- <option value="">= 옵션 : 가격 : 재고 =</option>
+                                                <option value="">익명이 : 110개</option>
+                                                <option value="">깨꾹이 : 100게</option> -->
+                                            </select>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="btn_choice_box">
+                                <button type="button" class="btn_add_cart">
+                                    <img src="/static/img/goods/goods_view/btn_cart.gif" alt="장바구니">
+                                </button>
+                                <button type="button" class="btn_add_order">
+                                    <img src="/static/img/goods/goods_view/btn_direct_buy.gif" alt="바로구매">
+                                </button>
+                                <button type="button" class="btn_add_wish">
+                                    <img src="/static/img/goods/goods_view/btn_wish_m_un.gif" alt="관심상품">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <div class="item_goods_sec">
+        <div id="detail">
+            <div class="item_goods_tab">
+                <ul>
+                    <li class="on">
+                        <a href="#detail">상품상세정보</a>
+                    </li>
+                    <li>
+                        <a href="#delivery">배송안내</a>
+                    </li>
+                    <li>
+                        <a href="#exchange">교환 및 반품안내</a>
+                    </li>
+                    <li>
+                        <a href="#reviews">상품후기 (2)</a>
+                    </li>
+                    <li>
+                        <a href="#qns">상품문의 (0)</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="detail_cont">
+                <h3>상품상세정보</h3>
+                <div class="detail_explain_box">
+                    <p style="text-align: center;">
+                        <img src="/static/img/goods/goods_view/detail_img.jpg" alt="">
+                    </p>
+                </div>
+            </div>
+            <h3>상품필수 정보</h3>
+            <div class="detail_info_box">
+                <div class="detail_table">
+                    <table class="left_table_type">
+                        <colgroup>
+                            <col style="width: 240px;">
+                            <col style="width: 359.7px;">
+                            <col style="width: 240px;">
+                            <col style="width: 359.7px;">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>품명 및 모델명</td>
+                                <td>익명&깨국 상큼 캔유리컵</td>
+                                <th>제조국, 원산지</td>
+                                <td>중국, 후가공 한국</td>
+                            </tr>
+                            <tr>
+                                <th>제조자 또는 수입자</td>
+                                <td>아이티프렌즈</td>
+                                <th>재질,용량/크기</td>
+                                <td>소다석회유리, 약480ml / 컵상단 6.5cm, 하단 7.4cm, 높이 13.3cm</td>
+                            </tr>
+                            <tr>
+                                <th>품질보증기준</td>
+                                <td>품질보증기간 구입후 1주일 이내 정상적인 사용상태에서 발생한 성능.기능상 하자 발생시 무상교환</td>
+                                <th>A/S 책임자/전화번호</td>
+                                <td>익명상점 02-812-8530</td>
+                            </tr>
+                            <tr>
+                                <th>세탁반법 및 취급시주의사항</td>
+                                <td colspan="3">삶거나 냉동보관하지 마시고, 화기에 가까이 두지 마세요</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div id="delivery">
+                <div class="item_goods_tab">
+                    <ul>
+                        <li>
+                            <a href="#detail">상품상세정보</a>
+                        </li>
+                        <li class="on">
+                            <a href="#delivery">배송안내</a>
+                        </li>
+                        <li>
+                            <a href="#exchange">교환 및 반품안내</a>
+                        </li>
+                        <li>
+                            <a href="#reviews">상품후기 (2)</a>
+                        </li>
+                        <li>
+                            <a href="#qna">상품문의 (0)</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="delivery_cont">
+                    <h3>배송안내</h3>
+                    <p>-배송비: 기본배송료는 2,500원 입니다. (도서,산간,오지 일부지역은 배송비가 추가될 수 있습니다) 50,000원 이상 구매시 무료배송입니다.</p>
+                    <p>-본 상품의 평균 배송일은 1 ~ 2 일 입니다.(입금 확인 후) 설치 상품의 경우 다소 늦어질수 있습니다.[배송예정일은 주문시점(주문순서)에 따른 유동성이 발생하므로 평균
+                        배송일과는 차이가 발생할 수 있습니다.]</p>
+                    <p>-본 상품의 배송 가능일은 1 ~ 2일 입니다. 배송가능일이란 본 상품을 주문 하신 고객님들께 상품 배송이 가능한 기간을 의미합니다. (단, 연휴 및 공휴일은 기간 계산시
+                        제외하며 현금 주문일 경우 입금일 기준 입니다.)</p>
+                    <p>-휴일(연휴,주말)기간 주문량이 많을 결우 빠른 출고를 위해 휴일기간 동안 미리 포장을하고 송장번호를 보내드립니다. 택배사에는 휴일 다음날 영업일에 전달되오니 위치조회가
+                        안되더라도 착오 없으시기 바랍니다.</p>
+                </div>
+            </div>
+            <div id="exchange">
+                <div class="item_goods_tab">
+                    <ul>
+                        <li>
+                            <a href="#detail">상품상세정보</a>
+                        </li>
+                        <li>
+                            <a href="#delivery">배송안내</a>
+                        </li>
+                        <li class="on">
+                            <a href="#exchange">교환 및 반품안내</a>
+                        </li>
+                        <li>
+                            <a href="#reviews">상품후기 (2)</a>
+                        </li>
+                        <li>
+                            <a href="#qna">상품문의 (0)</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="exhange_cont">
+                    <h3>교환 및 반품안내</h3>
+                    <p>-상품 택(tag)제거 또는 개봉으로 상품 가치 훼손 시에는 상품수령후 7일 이내라도 교환 및 반품이 불가능합니다.</p>
+                    <p>-저단가 상품, 일부 특가 상품은 고객 변심에 의한 교환, 반품은 고객께서 배송비를 부담하셔야 합니다(제품의 하자, 배송오류는 제외)</p>
+                    <p>-일부 상품은 신모델 출시, 부품가격 변동 등 제조사 사정으로 가격이 변동될 수 있습니다.</p>
+                    <p>-신발의 경우, 실외에서 착화하였거나 사용흔적이 있는 경우에는 교환/반품 기간내라도 교환 및 반품이 불가능 합니다.</p>
+                    <p>-수제화 중 개별 주문제작상품(굽높이,발볼,사이즈 변경)의 경우에는 제작완료, 인수 후에는 교환/반품기간내라도 교환 및 반품이 불가능 합니다.</p>
+                    <p>-수입,명품 제품의 경우, 제품 및 본 상품의 박스 훼손, 분실 등으로 인한 상품 가치 훼손 시 교환 및 반품이 불가능 하오니, 양해 바랍니다.</p>
+                    <p>-일부 특가 상품의 경우, 인수 후에는 제품 하자나 오배송의 경우를 제외한 고객님의 단순변심에 의한 교환, 반품이 불가능할 수 있사오니, 각 상품의 상품상세정보를 꼭
+                        참조하십시오.</p>
+                    <h3>환불안내</h3>
+                    <div class="admin_msg">-상품 청약철외 가능기간은 상품 수령일로 부터 7일 이내 입니다.</div>
+                    <h3>AS안내</h3>
+                    <div class="admin_msg">
+                        <p>-소비자분쟁해결 기준(공정거래위원회 고시)에 따라 피해를 보상받을 수 있습니다.</p>
+                        <p>-A/S는 판매자에게 문의하시기 바랍니다.</p>
+                    </div>
+                </div>
+            </div>
+            <div id="reviews">
+                <div class="item_goods_tab">
+                    <ul>
+                        <li>
+                            <a href="#detail">상품상세정보</a>
+                        </li>
+                        <li>
+                            <a href="#delivery">배송안내</a>
+                        </li>
+                        <li>
+                            <a href="#exchange">교환 및 반품안내</a>
+                        </li>
+                        <li class="on">
+                            <a href="#reviews">상품후기 (2)</a>
+                        </li>
+                        <li>
+                            <a href="#qna">상품문의 (0)</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="review_cont">
+                    <h3>상품후기</h3>
+                    <div id="ajax-goods-goodsreview-list">
+                        <div class="review_table">
+                            <table class="reviews_table_type">
+                                <colgroup>
+                                    <col width="13%">
+                                    <col>
+                                    <col width="13%">
+                                    <col width="13%">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <td>별</td>
+                                        <td>겨울동안 따뜻한 차를 우려서 먹었는데 솔직하게 유리잔이...</td>
+                                        <td>네이버페이 구매자</td>
+                                        <td>2022.02.25</td>
+                                    </tr>
+                                    <tr>
+                                        <td>별</td>
+                                        <td>익명이 깨꾹이 최고야 내열인거 너무좋아요ㅠㅠ</td>
+                                        <td>네이버페이 구매자</td>
+                                        <td>2022.01.21</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="pagination">
+                            <ul>
+                                <li class="on">
+                                    <span>1</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="btn_reviews_box">
+                        <a href="#" class="btn_reviews_more">
+                            상품후기 전체보기
+                        </a>
+                        <a href="#" class="btn_reviews_write">
+                            상품후기 글쓰기
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div id="qna">
+                <div class="item_goods_tab">
+                    <ul>
+                        <li>
+                            <a href="#detail">상품상세정보</a>
+                        </li>
+                        <li>
+                            <a href="#delivery">배송안내</a>
+                        </li>
+                        <li>
+                            <a href="#exchange">교환 및 반품안내</a>
+                        </li>
+                        <li>
+                            <a href="#reviews">상품후기 (2)</a>
+                        </li>
+                        <li class="on">
+                            <a href="#qna">상품문의 (0)</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="qna_cont">
+                    <h3>상품Q&A</h3>
+                    <div id="ajax-goods-goodsqa-list">
+                        <div class="qna_table">
+                            <table class="qna_table_type">
+                                <colgroup>
+                                    <col width="5%">
+                                    <col>
+                                    <col width="13%">
+                                    <col width="13%">
+                                    <col width="13%">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <td class="no_data" colspan="5">등록된 상품문의가 없습니다.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="pagination">
+                            <ul></ul>
+                        </div>
+                    </div>
+                    <div class="btn_qna_box">
+                        <a href="#" class="btn_qna_more">
+                            상품후기 전체보기
+                        </a>
+                        <a href="#" class="btn_qna_write">
+                            상품후기 글쓰기
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/static/js/goods/goods_view/btn_gray_list.js"></script>
+    <script src="/static/js/goods/goods_detail.js"></script>
+</body>
+
+</html>

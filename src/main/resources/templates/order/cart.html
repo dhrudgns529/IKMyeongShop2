@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/css/order/reset.css">
+    <link rel="stylesheet" href="/static/css/order/cart.css">
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div id="top">
+                <div class="sns">
+                    <ul>
+                        <li><a href="https://www.facebook.com/ikmyeongshop" target="_blank"><img
+                                    src="/static/img/header/top_btn_sns1.png" alt=""></a></li>
+                        <li><a href="https://www.instagram.com/anonymous_ikmsang/" target="_blank"><img
+                                    src="/static/img/header/top_btn_sns2.png" alt=""></a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="/account/login">로그인</a></li>
+                        <li><a href="/account/register">회원가입</a></li>
+                        <li><a href="/order/cart">장바구니0</a></li>
+                        <li><a href="/mypage/index">마이페이지</a></li>
+                        <li><a href="#">고객센터</a></li>
+                        <li><a href="#"><img src="/static/img/header/top_btn_search.png" alt=""></a></li>
+                    </ul>
+                </div>
+                <div class="logo">
+                    <a href="#"><img src="/static/img/header/event_left.png" alt=""></a>
+                    <a href="/index"><img src="/static/img/header/logo.png" alt=""></a>
+                    <a href="#"><img src="/static/img/header/event_right.png" alt=""></a>
+                </div>
+                <nav class="nav">
+                    <ul>
+                        <li class="nav1"><a href="/goods/goods_list">DOLL</a></li>
+                        <li class="nav1"><a href="#">FIGURE & TOY</a></li>
+                        <li><a href="#">FANCY</a></li>
+                        <li><a href="#">ACCESSORY</a></li>
+                        <li><a href="#">LIVING</a></li>
+                        <li><a href="#">KITCHEN & BATHROOM</a></li>
+                        <li><a href="#">MOBILE</a></li>
+                        <li><a href="#">깨꾹이</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <section id="bag_list">
+            <div class="location_cont">
+                <em><a class="local_home" href="#">HOME</a> > 장바구니</em>
+            </div>
+            <div class="content_box">
+                <div class="order_wrap">
+                    <div class="order_tit">
+                        <h2>장바구니</h2>
+                        <ol class="order_state">
+                            <li class="page_on">
+                                <span>01</span> 장바구니 <span class="state_img"><img
+                                        src="https://cdn-std-web-219-244-godomall.spdycdn.net/classythe8_godomall_com/data/skin/front/designbook_moderntim/img/member/icon_join_step_on.png"
+                                        alt=">기호"></span>
+                            </li>
+                            <li>
+                                <span>02</span> 주문서작성/결제 <span class="state_img"><img
+                                        src="https://cdn-std-web-219-244-godomall.spdycdn.net/classythe8_godomall_com/data/skin/front/designbook_moderntim/img/member/icon_join_step_on.png"
+                                        alt=">기호"></span>
+                            </li>
+                            <li>
+                                <span>03</span> 주문완료
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="cart_cont">
+                        <form id="frmCart" name="frmCart" method="post">
+                            <p class="no_data">장바구니에 담겨있는 상품이 없습니다.</p>
+                        </form>
+                        <div class="btn_left_box">
+                            <a class="shop_go_link" href="#">
+                                <em> 쇼핑 계속하기</em>
+                            </a>
+                        </div>
+                        <div class="price_sum">
+                            <div class="price_sum_cont">
+                                <div class="price_sum_list">
+                                    <dl class="product_price_sum">
+                                        <dt>
+                                            총 <strong id="totalGoodsCnt">0</strong> 개의 상품금액
+                                        </dt>
+                                        <dd>
+                                            <strong id="totalGoodsPrice">0</strong>원
+                                        </dd>
+                                    </dl>
+                                    <span>
+                                        <img src="https://cdn-std-web-219-244-godomall.spdycdn.net/classythe8_godomall_com/data/skin/front/designbook_moderntim/img/order/order_price_plus.png"
+                                            alt="">
+                                    </span>
+                                    <dl class="shipping_price_sum">
+                                        <dt>배송비</dt>
+                                        <dd>
+                                            <strong id="totalDeliveryCharge">0</strong>원
+                                        </dd>
+                                    </dl>
+                                    <span>
+                                        <img src="https://cdn-std-web-219-244-godomall.spdycdn.net/classythe8_godomall_com/data/skin/front/designbook_moderntim/img/order/order_price_total.png"
+                                            alt="">
+                                    </span>
+                                </div>
+                                <em id="deliveryChargeText" class="tobe_milege"></em>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>

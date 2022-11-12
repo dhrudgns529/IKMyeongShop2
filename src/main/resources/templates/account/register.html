@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ko"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>익명상점</title>
+
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <link rel="stylesheet" href="/static/css/account/reset.css">
+    <link rel="stylesheet" href="/static/css/header.css">
+    <link rel="stylesheet" href="/static/css/account/register.css">
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div id="top">
+                <div class="sns">
+                    <ul>
+                        <li><a href="https://www.facebook.com/ikmyeongshop" target="_blank"><img src="/static/img/header/top_btn_sns1.png" alt=""></a></li>
+                        <li><a href="https://www.instagram.com/anonymous_ikmsang/" target="_blank"><img src="/static/img/header/top_btn_sns2.png" alt=""></a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="/account/login">로그인</a></li>
+                        <li><a href="/account/register">회원가입</a></li>
+                        <li><a href="/order/cart">장바구니0</a></li>
+                        <li><a href="/mypage/index">마이페이지</a></li>
+                        <li><a href="#">고객센터</a></li>
+                        <li><a href="#"><img src="/static/img/header/top_btn_search.png" alt=""></a></li>
+                    </ul>
+                </div>
+                <div class="logo">
+                    <a href="#"><img src="/static/img/header/event_left.png" alt=""></a>
+                    <a href="/index"><img src="/static/img/header/logo.png" alt=""></a>
+                    <a href="#"><img src="/static/img/header/event_right.png" alt=""></a>
+                </div>
+                <nav  class="nav">
+                    <ul>
+                      <li><a href="/goods/DOll">DOLL</a></li>
+                      <li><a href="/goods/FIGURE&TOY">FIGURE & TOY</a></li>
+                      <li><a href="/goods/FANCY">FANCY</a></li>
+                      <li><a href="/goods/ACCESSORY">ACCESSORY</a></li>
+                      <li><a href="/goods/LIVING">LIVING</a></li>
+                      <li><a href="/goods/KITCHEN&BATHROOM">KITCHEN & BATHROOM</a></li>
+                      <li><a href="/goods/MOBILE">MOBILE</a></li>
+                      <li><a href="/goods/깨꾹이">깨꾹이</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div id="container">
+            <div id="contents">
+                <div class="location_wrap">
+                    <div class="location_cont">
+                        <em>
+                            <a href="/" class="local_home">HOME</a> > 회원가입 > 정보입력
+                        </em>
+                    </div>
+                </div>
+                <div class="sub_content">
+
+                    <!-- //side_cont -->
+    <div class="content_box">
+        <div class="join_base_wrap">
+            <div class="member_tit">
+                <h2>회원가입</h2>
+                <ol>
+                    <li class="page_on"><span>01</span> 정보입력<span><img src="https://cdn-std-web-219-244-godomall.spdycdn.net/classythe8_godomall_com/data/skin/front/designbook_moderntim/img/member/icon_join_step_on.png" alt=""></span></li>
+                    <li><span>02</span> 가입완료</li>
+                </ol>
+            </div>
+            <!-- //member_tit -->
+            <div class="member_cont">
+                <form id="formJoin" name="formJoin" action="https://www.ikmyeongshop.com/member/member_ps.php" method="post" novalidate="novalidate">
+                    <div class="base_info_box">
+                        <h3>기본정보</h3>
+                        <span class="important">표시는 반드시 입력하셔야 하는 항목입니다.</span>
+                    <div class="base_info_sec">
+                        <table>
+                            <colgroup>
+                                <col width="25%">
+                                <col width="75%">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th><span class="important">아이디</span></th>
+                                    <td>
+                                        <div class="member_warning">
+                                            <input class="register-inputs" type="text" id="memId" name="memId" data-pattern="gdMemberId">
+                                        </div>
+                                        <div class="error-message"></div>
+                                    </td>
+                    
+                                </tr>
+                                <tr class="">
+                                    <th><span class="important">비밀번호</span></th>
+                                    <td class="member_password">
+                                        <div class="member_warning">
+                                            <input class="register-inputs" type="password" id="newPassword" name="memPw" autocomplete="off" placeholder="">
+                                        </div>
+                                        <div class="error-message"></div>
+                                    </td>
+                                </tr>
+                                <tr class="">
+                                    <th><span class="important">비밀번호 확인</span></th>
+                                    <td>
+                                        <div class="member_warning">
+                                            <input class="register-inputs" type="password" name="memPwRe" autocomplete="off">
+                                        </div>
+                                        <div class="error-message"></div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><span class="important">이름</span></th>
+                                    <td>
+                                        <div class="member_warning">
+                                            <input class="register-inputs" type="text" name="memNm" data-pattern="gdEngKor" value="" maxlength="30">
+                                        </div>
+                                        <div class="error-message"></div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><span class="important">이메일</span></th>
+                                    <td class="member_email">
+                                        <div class="member_warning">
+                                            <input class="register-inputs " type="text" name="email" id="email" value="" tabindex="-1">
+                                            <select id="emailDomain" name="emailDomain" class="chosen-select">
+                                                <option value="@">직접입력</option>
+                                                <option value="@naver.com">naver.com</option>
+                                                <option value="@hanmail.net">hanmail.net</option>
+                                                <option value="@daum.net">daum.net</option>
+                                                <option value="@nate.com">nate.com</option>
+                                                <option value="@hotmail.com">hotmail.com</option>
+                                                <option value="@gmail.com">gmail.com</option>
+                                                <option value="@icloud.com">icloud.com</option>
+                                            </select>
+                                        </div>
+                                        <div class="error-message"></div>
+                                        <div class="form_element">
+                                            <input type="checkbox" id="maillingFl" name="maillingFl" value="y">
+                                            <label for="maillingFl" class="check_s ">정보/이벤트 메일 수신에 동의합니다.</label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><span>휴대폰번호</span></th>
+                                    <td class="member_address">
+                                        <div class="address_postcode">
+                                            <input class="register-inputs" type="text" id="lPhone" name="Phone" maxlength="12" placeholder="- 없이 입력하세요." >
+                                        </div>
+                                        <div class="form_element">
+                                            <input type="checkbox" id="smsFl" name="smsFl" value="y">
+                                            <label for="smsFl" class="check_s ">정보/이벤트 SMS 수신에 동의합니다.</label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                    <tr>
+                                    <th><span>주소</span></th>
+                                    <td class="member_address">
+                                        <div class="address_postcode">
+                                            <input class="register-inputs" type="text" name="postcode" id="postcode" readonly="readonly">
+                                            <button type="button" class="btn_post_search">우편번호검색</button>
+                                        </div>
+                                        <div class="address_input">
+                                            <div class="member_warning">
+                                                <input class="register-inputs" type="text" name="address" id="address" readonly="readonly">
+                                            </div>
+                                            <div class="member_warning js_address_sub">
+                                                <input class="register-inputs" type="text" name="addressSub" id="addressSub">
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="btn_center_box">
+                            <button type="button" class="btn-member-cancel">취소</button>
+                            <button type="button" class="btn_comfirm js_btn_join" value="회원가입">회원가입</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <script src="/static/js/account/register.js"></script>
+    </div>
+        </div>
+        </div>
+        </div>
+        <div id="footer_wrap">
+    
+        </div>
+    </div>
+</body>
+</html>

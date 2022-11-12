@@ -1,0 +1,380 @@
+#container{
+  width: 1200px;
+  margin: 0 auto;
+  border-top: none;
+}
+#contents {
+  display: flex;
+  flex-direction: column;
+  min-height: auto;
+  padding: 0 0 58px;
+}
+
+.location_wrap {
+  border-bottom: none;
+  width: 100%;
+}
+
+.location_cont {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.location_cont em {
+  display: block;
+  float: left;
+  padding: 12px 0 10px 0;
+  color: #777777;
+  font-size: 11px;
+
+  font-style: normal;
+  font-weight: normal;
+}
+
+.sub_content {
+  margin: 0 auto;
+  padding: 10px 0 0 0;
+  width: 1200px;
+}
+
+.content_box {
+  float: none;
+  width: 100%;
+}
+
+
+.member_tit {
+  overflow: hidden;
+  border-bottom: 1px solid #dbdbdb;
+}
+
+.member_tit h2 {
+  float: left;
+  font-size: 28px;
+  color: #222222;
+
+  margin-bottom: 20px;
+}
+
+.member_tit ol {
+  float: right;
+  line-height: 62px;
+}
+
+.member_tit ol li {
+  display: list-item;
+
+  float: left;
+  font-size: 14px;
+  color: #d1d1d1;
+}
+
+.member_tit ol li span {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.join_base_wrap .member_tit li span > img {
+  padding: 0 14px;
+  vertical-align: -1px;
+}
+
+.member_tit .page_on{
+  color: #ab3e55;
+  font-weight: bold;
+}
+
+.member_cont{
+  width: 743px;
+  margin: 0 auto;
+  padding: 70px 60px;
+
+  align-items: center;
+}
+
+.member_cont h3 {
+  display: inline-block;
+  padding: 0 0 17px 0;
+  font-size: 18px;
+  font-weight: normal;
+  color: #222222;
+}
+.base_info_box {
+  flex-direction: column;
+  width: 743px;
+}
+
+.base_info_box .btn_center_box {
+  margin: 35px 0 0 0;
+  text-align: center;
+}
+
+.base_info_box h3 {
+  display: inline-block;
+}
+
+.join_base_wrap .important {
+  background: url(/static/img/account/register/icon_dot_03.png)
+          no-repeat 0 center;
+}
+
+.base_info_box > span{
+  display: block;
+  float: right;
+  line-height: 40px;
+  padding: 0 0 0 10px;
+  color: #ab3e55;
+}
+
+.base_info_sec {
+  height: 700px;
+  border-top: 1px solid #999999;
+  box-sizing: border-box;
+  line-height: 18px;
+}
+
+table {
+  display: table;
+  border-collapse: separate;
+  box-sizing: border-box;
+  text-indent: initial;
+  border-color: gray;
+}
+
+.base_info_sec table {
+  width: 100%;
+}
+
+colgroup {
+  display: table-column-group;
+}
+
+tbody {
+  display: table-row-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+
+td {
+  display: table-cell;
+  vertical-align: inherit;
+}
+
+.base_info_sec table th {
+  padding: 10px 25px;
+  text-align: left;
+  border-bottom: 1px solid #dcdcdc;
+  background-color: #fbfbfb;
+}
+
+.join_base_wrap table th span {
+  padding: 0 0 0 10px;
+  margin: 0 0 0 -10px;
+}
+
+.base_info_sec table td {
+  padding: 15px 0 15px 15px;
+  border-bottom: 1px solid #dcdcdc;
+}
+
+.inputs-invisible {
+  border: 1px solid #ab3e55 !important;
+}
+
+input[type="text"], input[type="password"] {
+  padding: 0 10px;
+  height: 31px;
+  color: #333333;
+  border: 1px solid #d6d6d6;
+  box-sizing: border-box;
+
+  outline: none;
+  font-size: 12px;
+}
+
+.error-message {
+  padding-top: 5px;
+  color: #ab3e55;
+}
+
+.base_info_sec .member_email select {
+  width: 120px;
+}
+
+select {
+  height: 31px;
+  color: #717171;
+  outline: none;
+}
+
+option {
+  display: block;
+  padding: 0px 2px 1px;
+  min-height: 1.2em;
+
+  white-space: nowrap;
+  font-weight: normal;
+}
+
+#wrap .chosen-container{
+  vertical-align: top;
+  text-align: left;
+}
+
+.chosen-container {
+  display: inline-block;
+  width: 120px;
+
+  font-size: 13px;
+  user-select: none;
+}
+
+#wrap .chosen-single {
+  height: 31px;
+  color: #717171;
+  vertical-align: top;
+  outline: none;
+  border: 1px solid #cccccc;
+}
+
+#wrap .chosen-container .chosen-drop {
+  border: 1px solid #cccccc;
+  border-top: none 0;
+  margin-top: -1px;
+  border-radius: 0 0 4px 4px;
+  background-clip: padding-box;
+}
+
+
+.chosen-container * {
+  box-sizing: border-box;
+}
+
+.chosen-container a{
+  cursor: pointer;
+}
+
+
+.chosen-single {
+  display: block;
+  padding: 0 0 0 8px;
+  background-color: #fff;
+}
+
+.chosen-container-single .chosen-single span {
+  display: block;
+  overflow: hidden;
+  margin-right: 26px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+.chosen-container-single .chosen-single span {
+  display: block;
+  overflow: hidden;
+  margin-right: 26px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.base_info_sec table .form_element {
+  display: block;
+  margin-top: 5px;
+}
+
+.chosen-search {
+  position: absolute;
+  z-index: 1010;
+  margin: 0;
+  padding: 3px 4px;
+}
+
+.chosen-search input[type="text"] {
+  margin: 1px 0;
+  padding: 4px 20px 4px 5px;
+  width: 100%;
+  height: auto;
+  outline: 0;
+  border: 1px solid #aaa;
+  font-size: 1em;
+  font-family: sans-serif;
+  line-height: normal;
+  border-radius: 0;
+}
+
+.chosen-single div b {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url(/account/img/chosen-sprite.png) no-repeat 0px 2px;
+}
+
+.address_postcode {
+  overflow: hidden;
+}
+
+#contents .member_address .address_postcode input {
+  float: left;
+  width: 190px;
+}
+
+.address_postcode input[type="text"] {
+  padding: 0 10px;
+  float: left;
+  outline: none;
+
+  font-size: 12px;
+}
+
+.btn_post_search {
+  float: left;
+  margin-left:5px;
+  padding: 5px 10px 5px 10px;
+  border: 1px solid #989898;
+}
+
+#contents .member_address .address_input input {
+  margin: 10px 0 0 0;
+}
+
+.base_info_sec table input[type="text"] {
+  width: 380px;
+}
+
+.base_info_sec .member_email input[type="text"] {
+  width: 251px;
+}
+
+.member_cont .btn_center_box {
+  margin-top: 35px;
+  text-align: center;
+}
+
+.btn-member-cancel {
+  width: 150px;
+  height: 45px;
+  color: #3e3d3c;
+  font-weight: bold;
+  font-size: 13px;
+  border: 1px solid #cccccc;
+  background: #fff;
+  cursor: pointer;
+}
+
+.btn_center_box button + button, .btn_left_box button + button, .btn_right_box button + button {
+  margin-left: 6px;
+}
+
+.btn_comfirm {
+  width: 150px;
+  height: 45px;
+  margin: 0;
+  color: #ffffff;
+  font-size: 14px;
+  border: 1px solid #ab3e55;
+  background: #ab3e55;
+  cursor: pointer;
+  font-weight: bold;
+}
+

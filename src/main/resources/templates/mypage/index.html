@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/css/mypage/reset.css">
+    <link rel="stylesheet" href="/static/css/mypage/index.css">
+</head>
+<body>
+    <header id="header">
+        <div id="top">
+            <div class="sns">
+                <ul>
+                    <li><a href="https://www.facebook.com/ikmyeongshop" target="_blank"><img src="/static/img/header/top_btn_sns1.png" alt=""></a></li>
+                    <li><a href="https://www.instagram.com/anonymous_ikmsang/" target="_blank"><img src="/static/img/header/top_btn_sns2.png" alt=""></a></li>
+                </ul>
+                <ul>
+                    <li><a href="/account/login">로그인</a></li>
+                    <li><a href="/account/register">회원가입</a></li>
+                    <li><a href="/order/cart">장바구니0</a></li>
+                    <li><a href="/mypage/index">마이페이지</a></li>
+                    <li><a href="#">고객센터</a></li>
+                    <li><a href="#"><img src="/static/img/header/top_btn_search.png" alt=""></a></li>
+                </ul>
+            </div>
+            <div class="logo">
+                <a href="#"><img src="/static/img/header/event_left.png" alt=""></a>
+                <a href="/index"><img src="/static/img/header/logo.png" alt=""></a>
+                <a href="#"><img src="/static/img/header/event_right.png" alt=""></a>
+            </div>
+            <nav  class="nav">
+                <ul>
+                  <li><a href="/goods/DOll">DOLL</a></li>
+                  <li><a href="/goods/FIGURE&TOY">FIGURE & TOY</a></li>
+                  <li><a href="/goods/FANCY">FANCY</a></li>
+                  <li><a href="/goods/ACCESSORY">ACCESSORY</a></li>
+                  <li><a href="/goods/LIVING">LIVING</a></li>
+                  <li><a href="/goods/KITCHEN&BATHROOM">KITCHEN & BATHROOM</a></li>
+                  <li><a href="/goods/MOBILE">MOBILE</a></li>
+                  <li><a href="/goods/깨꾹이">깨꾹이</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div id="container">
+            <div class="location">
+                <a class="location-info" href="/mypage/index">HOME</a>
+                <div class="location-info">></div>
+                <a class="location-info" href="#">마이페이지</a>
+            </div>
+            <div class="contents">
+                <div class="content-side">
+                    <h2 class="content-side-title">마이페이지</h2>
+                    <div class="side-content-menulist">쇼핑정보
+                        <a class="side-content-menu" href="/mypage/orderlist">- 주문목록</a>
+                        <a class="side-content-menu" href="/mypage/cancellist">- 취소내역</a>
+                        <a class="side-content-menu" href="/mypage/wishlist">- 찜리스트</a>
+                    </div>
+                    <div class="side-content-menulist">나의 상품문의
+                        <a class="side-content-menu" href="/mypage/mypageqa">- 나의 상품문의</a>
+                    </div>
+                    <div class="side-content-menulist">나의 상품후기
+                        <a class="side-content-menu" href="/mypage/goodsreview">- 나의 상품후기</a>
+                    </div>
+                    <div class="side-content-menulist">고객센터
+                        <a class="side-content-menu" href="/mypage/mypageqa">- 1:1 문의</a>
+                    </div>
+                    <div class="side-content-menulist">회원정보
+                        <a class="side-content-menu" href="/mypage/mypagepassword">- 회원정보 변경</a>
+                        <a class="side-content-menu" href="/mypage/hackout">- 회원 탈퇴</a>
+                    </div>
+                </div>
+                <div class="content-main">
+                    <div class="content-main-info">
+                        <div class="content-main-info-1"><b>홍길동</b>님의<br>회원등급은 일반회원등급 입니다.
+                        </div>
+                        <div class="content-main-info-2">
+                            <div class="content-main-info-2-img"><img src="/static/img/mypage/coupon.PNG" alt="쿠폰"></div>
+                            <div class="content-main-info-2-name">쿠폰</div>
+                            <div class="content-main-info-2-num">0장</div>
+                        </div>
+                        <div class="content-main-info-2 content-main-info-2-center">
+                            <div class="content-main-info-2-img"><img src="/static/img/mypage/mileage.PNG" alt="마일리지"></div>
+                            <div class="content-main-info-2-name">마일리지</div>
+                            <div class="content-main-info-2-num">1000원</div>
+                        </div>
+                        <div class="content-main-info-2">
+                            <div class="content-main-info-2-img"><img src="/static/img/mypage/money.PNG" alt="예치금"></div>
+                            <div class="content-main-info-2-name">예치금</div>
+                            <div class="content-main-info-2-num">0원</div>
+                        </div>
+                    </div>
+                    <h3 class="content-main-orderinfo-title">진행 중인 주문<span class="content-main-orderinfo-title-span">최근 30일 내에 진행중인 주문정보입니다.</span></h3>
+                        <div class="content-main-orderinfo">
+                            <div class="content-main-orderinfo-status">
+                                <div class="content-main-orderinf-suatus-text1">입금대기</div>
+                                <div class="content-main-orderinf-suatus-text2">0</div>
+                            </div>
+                            <div class="arrow"><img src="/static/img/mypage/arrow.PNG" alt="화살표"></div>
+                            <div class="content-main-orderinfo-status">
+                                <div class="content-main-orderinf-suatus-text1">결제완료</div>
+                                <div class="content-main-orderinf-suatus-text2">0</div>
+                            </div>
+                            <div class="arrow"><img src="/static/img/mypage/arrow.PNG" alt="화살표"></div>
+                            <div class="content-main-orderinfo-status">
+                                <div class="content-main-orderinf-suatus-text1">상품준비중</div>
+                                <div class="content-main-orderinf-suatus-text2">0</div>
+                            </div>
+                            <div class="arrow"><img src="/static/img/mypage/arrow.PNG" alt="화살표"></div>
+                            <div class="content-main-orderinfo-status">
+                                <div class="content-main-orderinf-suatus-text1">배송중</div>
+                                <div class="content-main-orderinf-suatus-text2">0</div>
+                            </div>
+                            <div class="arrow"><img src="/static/img/mypage/arrow.PNG" alt="화살표"></div>
+                            <div class="content-main-orderinfo-status">
+                                <div class="content-main-orderinf-suatus-text1">배송완료</div>
+                                <div class="content-main-orderinf-suatus-text2">0</div>
+                            </div>
+                            <div class="arrow"><img src="/static/img/mypage/arrow.PNG" alt="화살표"></div>
+                            <div class="content-main-orderinfo-status">
+                                <div class="content-main-orderinf-suatus-text1">구매확정</div>
+                                <div class="content-main-orderinf-suatus-text2">0</div>
+                            </div>
+                            <div class="content-main-orderinfo-status end">
+                                <div class="content-main-orderinfo-status-detail">
+                                    <div>• 취소</div>
+                                    <div>0건</div>
+                                </div>
+                                <div class="content-main-orderinfo-status-detail content-main-orderinfo-status-detail-center">
+                                    <div>• 교환</div>
+                                    <div>0건</div>
+                                </div>
+                                <div class="content-main-orderinfo-status-detail">
+                                    <div>• 반품</div>
+                                    <div>0건</div>
+                                </div>
+                            </div>
+                        </div>
+                    <h3 class="content-main-recent-orderinfo-title">최근 주문 정보<span class="content-main-orderinfo-title-span">최근 30일 내에 주문하신 내역입니다.</span></h3>
+                        <div>
+                            <table class="content-main-recent-orderinfo">
+                                <thead class="content-main-recent-orderinfo-thead">
+                                    <tr>
+                                        <th>날짜/주문번호</th>
+                                        <th>상품명/옵션</th>
+                                        <th>상품금액/수량</th>
+                                        <th>주문상태</th>
+                                        <th>확인/리뷰</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="content-main-recent-orderinfo-tbody">
+                                    <tr>
+                                        <td colspan="7">조회내역이 없습니다.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    <h3 class="content-main-recent-goods">최근 본 상품<span class="content-main-orderinfo-title-span">홍길동님께서 본 최근 상품입니다.</span></h3>
+                        <div class="goods-data">
+                            상품이 존재하지 않습니다.
+                        </div>
+                </div>
+            </div> 
+        </div>
+    </main>
+</body>
+</html>

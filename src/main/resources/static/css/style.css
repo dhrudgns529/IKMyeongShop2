@@ -1,0 +1,9 @@
+#wrap{
+    width: 100%;
+}
+#mainImg .main{ 
+    display: flex;
+}
+#mainImg img{
+    width: 100%;
+}

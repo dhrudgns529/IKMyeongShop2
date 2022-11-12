@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="com.study.ikmyeongshopteam4.repository.ProductRepository">
+
+    <resultMap id="getProductDtl" type="com.study.ikmyeongshopteam4.domain.ProductDetail">
+        <result property="id" column="pdt_dtl_id"/>
+        <result property="pdt_design" column="pdt_design"/>
+        <result property="pdt_stock" column="pdt_stock"/>
+    </resultMap>
+
+    <resultMap id="getProductImg" type="com.study.ikmyeongshopteam4.domain.ProductImgFile">
+        <result property="save_name" column="save_name"/>
+    </resultMap>
+
+    <resultMap id="getProductMst" type="com.study.ikmyeongshopteam4.domain.Product">
+        <result property="id" column="pdt_id"/>
+        <result property="pdt_name" column="pdt_name"/>
+        <result property="pdt_price" column="pdt_price"/>
+        <collection property="pdt_dtls" javaType="list" resultMap="getProductDtl"/>
+        <collection property="pdt_imgs" javaType="list" resultMap="getProductImg"/>
+    </resultMap>
+
+    <select id="getProductList" parameterType="hashmap" resultType="com.study.ikmyeongshopteam4.domain.GoodsProduct">
+        select
+            pm.id,
+            pm.pdt_name,
+            pm.pdt_price,
+            pim.save_name,
+            pm_cnt.product_total_count
+        from
+            pdt_mst pm
+            left outer join pdt_image_mst pim on(pim.pdt_id = pm.id)
+            left outer join (   select count(*) product_total_count
+                                from pdt_mst
+                                where
+                                1 = 1
+                                <if test='category != "all"'>
+                                    and category_id = (select id from pdt_category_mst where category_name = #{category})
+                                </if> ) pm_cnt on(1 = 1)
+        where
+            1 = 1
+            <if test='category != "all"'>
+                and pm.category_id = (select id from pdt_category_mst where category_name = #{category})
+            </if>
+        group by
+            pm.id
+        limit #{index}, #{limitCount};
+    </select>
+    <select id="getList" parameterType="hashmap" resultType="com.study.ikmyeongshopteam4.domain.admin.ProductList">
+        SELECT
+            pm.id,
+            pc.category_name,
+            pm.pdt_name,
+            pm.pdt_price,
+            pd.pdt_design
+        FROM
+            pdt_mst pm
+            LEFT OUTER JOIN pdt_dtl pd ON(pd.id = pm.id)
+            LEFT OUTER JOIN pdt_category_mst pc ON(pc.id = pm.category_id)
+        WHERE
+            pd.id = pm.id
+    </select>
+
+    <select id="getProduct" resultMap="getProductMst">
+        SELECT
+            pm.id AS pdt_id,
+            pm.pdt_name,
+            pm.pdt_price,
+            pd.id AS pdt_dtl_id,
+            pd.pdt_design,
+            pd.pdt_stock,
+            pim.save_name
+        FROM
+            pdt_mst pm
+            LEFT OUTER JOIN pdt_dtl pd ON(pd.pdt_id = pm.id)
+            LEFT OUTER JOIN pdt_image_mst pim ON(pim.pdt_id = pm.id)
+        WHERE
+            pm.id = #{pdtID}
+    </select>
+
+</mapper>

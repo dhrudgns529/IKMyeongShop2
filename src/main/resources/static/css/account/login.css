@@ -1,0 +1,300 @@
+#wrap{
+    width: 100%;
+}
+#header{
+    display: flex;
+    justify-content: center;
+}
+#top{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+#header .sns{
+    width: 1200px;
+    height: 40px;
+}
+#header .logo{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 1200px;
+    height: 174px;
+}
+#top .sns{
+    display: flex;
+    justify-content: space-between;
+}
+#top .sns ul{
+    display: flex;
+    height: 40px;
+    align-items: center;
+}
+#top .sns li{
+    margin-right: 10px;
+    color: #888888;
+}
+#header .nav{
+    display: flex;
+    justify-content: center;
+    width: 1920px;
+    height: 50px;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+}
+#header .nav ul{
+    display: flex;
+    font-size: 15px;
+    height: 50px;
+    width: 1000px;
+    align-items: center;
+    justify-content:space-around;
+}
+#header .nav1{
+    font-weight: 700;
+}
+
+#account{
+    width: 100%;
+    height: 600px;
+}
+
+.location_cont{
+    margin: 0 auto;
+    width: 950px;
+    height: 38.5px;
+}
+
+.location_cont em{
+    display: block;
+    padding: 12px 0px 10px 0px;
+    width: 81px;
+    height: 16.5px;
+    color: rgb(119, 119, 119);
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.sub_content{
+    padding-top: 10px;
+    width: 100%;
+    height: 550px;
+    color: rgb(51, 51, 51);
+}
+
+.content_box{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 550px;
+}
+
+.member_wrap{
+    margin: 20px 0px 40px 0px;
+    width: 595px;
+    height: 550px;
+}
+
+.member_tit{
+    width: 100%;
+    height: 42px;
+    margin-bottom: 20px;
+}
+
+.member_tit > h2{
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.member_cont{
+    width: 595px;
+    height: 520px;
+    padding: 70px 60px;
+    border: 1px solid rgb(219, 219, 219);
+}
+
+.member_login_box{
+    width: 100%;
+    height: 189.5px;
+}
+
+.member_login_box > h3{
+    width: 100%;
+    height: 27px;
+    font-size: 18px;
+    font-weight: 400;
+    color: rgb(34, 34, 34);
+}
+
+.login_input_sec{
+    margin-top: 15px;
+    width: 100%;
+    height: 97px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.login_input_sec input{
+    margin-bottom: 10px;
+    padding-left: 10px;
+    width: 292px;
+    height: 38px;
+    background-color: rgb(250, 250, 250);
+    border: 1px solid rgb(208, 208, 208);
+    font-size: 12px;
+}
+
+.login_input_sec button{
+    width: 258px;
+    height: 86px;
+    background-color: rgb(64, 64, 64);
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.id_chk{
+    width: 100%;
+    height: 50px;
+    padding-bottom: 26px;
+}
+
+.form_element{
+    display: block;
+    width: 100%;
+    height: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.saveId{
+    width: 20px;
+    height: 20px;
+    border: 1px solid rgb(208, 208, 208);   
+
+}
+
+.form_element > label{
+    width: 120px;
+    padding-left: 10px;
+    color: rgb(51, 51, 51);
+    font-size: 12px;
+}
+
+.member_sns_login{
+    width: 100%;
+    height: 140px;
+}
+
+.btn_google_login, .btn_naver_login{
+    width: 100%;
+    height: 64.5px;
+    text-align: center;
+    font-size: 15px;
+    border: none;
+}
+
+.btn_naver_login{
+    margin-top: 12px;
+}
+
+.btn_google_login img{
+    width: 100%;
+    height: 64.5px;
+}
+
+.btn_naver_login img{
+    width: 100%;
+    height: 60.5px;
+}
+
+.btn_login_box{
+    margin-top: 20px;
+    width: 100%;
+    height: 66px;
+}
+
+.btn_login_box button{
+    width: 150px;
+    height: 45px;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.btn_login_box > ul{
+    width: 100%;
+    height: 66px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-top: 1px solid rgb(204, 204, 204);
+}
+
+.btn-member-join{
+    background-color: rgb(102, 102, 102);
+    color: white;
+    border: 1px solid rgb(102, 102, 102);
+}
+
+.btn_find_id, .btn_find_pwd{
+    color: rgb(62, 61, 60);
+    border: 1px solid rgb(204, 204, 204)
+}
+
+.nonmember_order_box{
+    margin-top: 40px;
+    width: 100%;
+    height: 130px;
+}
+
+.nonmember_order_box > h3{
+    width: 100%;
+    height: 27px;
+    color: rgb(34, 34, 34);
+    font-size: 18px;
+
+}
+
+.order_input_sec{
+    width: 100%;
+    height: 112px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.order_inputs{
+    margin-top: 15px;
+    width: 290px;
+    height: 87px;
+}
+
+.order_inputs input{
+    margin-bottom: 10px;
+    padding-left: 8px;
+    width: 100%;
+    height: 36px;
+    border: 1px solid rgb(204, 204, 204);
+    color: rgb(151, 157, 157);
+    font-size: 12px;
+}
+
+.order_input_sec button{
+    margin-top: 15px;
+    width: 150px;
+    height: 85px;
+    text-align: center;
+    border: 1px solid rgb(64, 64, 64);
+    color: rgb(64, 64, 64);
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.js_caution_msg2{
+    margin-top:5px;
+    font-size: 12px;
+    color: rgb(109, 109, 109);
+}

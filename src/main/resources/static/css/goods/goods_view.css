@@ -1,0 +1,477 @@
+* {
+    box-sizing: border-box;
+}
+.goods_view_top {
+    display: flex;
+    justify-content: center;
+    padding: 0px 0px 25px;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: #f6f6f6;
+}
+
+.location_warp {
+    padding: 10px 0px 0px;
+}
+
+.location_cont {
+    width: 1200px;
+    height: 38.5px;
+
+}
+
+select {
+    font-size: 11px;
+}
+
+.item_photo_info_sec {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 40px;
+    height: 100%;
+}
+
+.item_photo_view {
+    margin-left: 80px;
+    /* height: 490px;
+    width: 490px; */
+}
+
+.item_photo:nth-child(2) {
+    height: 66px;
+    width: 66px;
+}
+
+.item_photo:nth-child(2) img {
+    height: 100%;
+    width: 100%;
+}
+
+.item_photo:nth-child(3) {
+    height: 66px;
+    width: 66px;
+}
+
+.item_photo:nth-child(3) img {
+    height: 100%;
+    width: 100%;
+}
+
+.item_photo:nth-child(4) {
+    height: 66px;
+    width: 66px;
+}
+
+.item_photo:nth-child(4) img {
+    height: 100%;
+    width: 100%;
+}
+
+
+
+.item_photo img {
+    width: 490px;
+    height: 490px;
+}
+
+.slick-list.draggable {
+    display: flex;
+    justify-items: center;
+    width: 370px;
+    height: 70px;
+    margin: 0px 61px;
+}
+
+/* .mini_img {
+    height: 66px;
+    width: 66px;
+} */
+
+/* .mini_img img {
+    width: 100%;
+    height: 100%;
+} */
+
+.img_cl {
+    width: 100%;
+    height: 66px;
+}
+
+.item_info_box {
+    width: 492px;
+    margin-right: 96px;
+}
+
+.item_detail_tit {
+    padding: 35px 0px 20px;
+    border: none;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.item_detail_list dl {
+    display: flex;
+    min-height: 24px;
+    padding: 7px 0px 6px;
+}
+
+.item_detail_tit h3 {
+    font-size: 20px;
+}
+
+.item_price strong {
+    font-size: 16px;
+}
+
+dt {
+    margin: 0px 24.5881px 0px 0px;
+    width: 123px;
+    height: 18px;
+}
+
+.goods-price{
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.item_discount_dn {
+    padding: 1px 0 2px 20px;
+    background-image: url("/static/img/goods/goods_view/Mbutton.png");
+    background-repeat: no-repeat;
+
+}
+
+.item_add_option_box {
+    padding: 10px 0px 9px;
+    border-top: 1px solid #dbdbdb;
+}
+
+.btn_choice_box {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0px 0px;
+    border-top: 1px solid black;
+}
+
+.btn_choice_box button {
+    border: none;
+    cursor: pointer;
+
+}
+
+.option_bar {
+    width: 344px;
+    height: 31px;
+}
+
+.no-stock {
+    color: rgb(198, 198, 198);
+    text-decoration: line-through;
+}
+
+.benefit_mileage {
+    color: #999999;
+    font-size: 11px;
+}
+
+.item_delivery dt {
+    display: flex;
+    margin: 0px 24.6px 0px 0px;
+}
+
+
+
+.dd1 {
+    padding: 0px 5px 5px 0px;
+    width: 344.4px;
+    height: 78px;
+}
+
+.layer_area_invisible{
+    display: none;
+}
+
+.layer_area {
+    /* display: none; */
+    position: relative;
+    width: 305px;
+    text-align: left;
+    border: 1px solid #999999;
+    background-color: #ffffff;
+}
+
+.dd1 {
+    position: relative;
+}
+
+#lyDelivery {
+    position: absolute;
+    right: 28%;
+}
+
+#lyDeliveryZone {
+    position: absolute;
+    left: -30%;
+}
+
+.ly_tit {
+    padding: 13px 35px 11px 15px;
+    font-size: 12px;
+    background-color: #f4f4f4;
+    height: 42px;
+}
+
+.ly_cont {
+    padding: 0px 15px 15px;
+    width: 305px;
+    height: 167px;
+}
+
+.ly_close {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.delivery_list li {
+    padding: 10px 5px;
+    border-bottom: 1px solid #f4f4f4;
+    font-weight: bold;
+}
+
+.delivery_list span {
+    float: right;
+    font-weight: normal;
+}
+
+.chk_none {
+    margin: 10px 0px 0px;
+    padding: 5px 0px 5px 19px;
+}
+
+#lyDeliveryZone .ly_cont {
+    height: 132px;
+}
+
+.btn_gray_small {
+    display: inline-block;
+    padding: 0px 0px 0px 11px;
+    height: 24px;
+
+    border: 1px solid #dbdbdb;
+    background-color: white;
+}
+
+.btn_gray_small em {
+    font-size: 11px;
+    vertical-align: middle;
+    
+}
+
+.btn_gray_small:hover {
+    background-color: #f8f8f8;
+}
+
+.btn_gray_small em {
+    padding: 0px 20px 0px 0px;
+}
+
+/* 제품 상세 상단 끝 */
+
+.item_goods_sec {
+    width: 1200px;
+    margin: 0px auto;
+}
+
+.item_goods_sec h3 {
+    padding: 45px 0px 10px 0px;
+    font-size: 18px;
+}
+
+.item_goods_tab {
+    width: 100%;
+    height: 141px;
+    padding: 80px 0px 0px;
+}
+
+.item_goods_tab ul {
+    display: flex;
+    justify-content: space-evenly;
+    height: 44px;
+    padding: 16px 0px 0px;
+    border-bottom: 1px solid #c7c7c7;
+    text-align: center;
+}
+
+.on a {
+    font-size: 13px;
+
+}
+
+.detail.cont {
+    display: flex;
+    align-items: center;
+}
+
+.left_table_type {
+    border-collapse: collapse;
+}
+
+.left_table_type th, .left_table_type td {
+    height: 52px;
+
+    border: 1px solid #c7c7c7;
+}
+
+.left_table_type th {
+    padding: 10px 10px 10px 14px;
+    text-align: left;
+
+    background-color: #f9f9f9;
+}
+
+.left_table_type td {
+    padding: 10px 10px 10px 18px;
+    color: #777777;
+}
+
+.delivery_cont p {
+    margin-bottom: 3px;
+}
+
+/* 교환 CSS */
+
+.exhange_cont p {
+    margin-bottom: 3px;
+}
+
+.admin_msg {
+    height: 100px;
+}
+
+/* 상품후기 CSS */
+
+.review_cont {
+    position: relative;
+    padding-top: 20px;
+}
+
+.review_table {
+    width: 100%;
+}
+
+.review_cont h3 {
+    border-bottom: 1px solid black;
+}
+
+.reviews_table_type {
+    width: 100%;
+}
+
+.review_table td {
+    padding: 13px 10px 15px 18px;
+    border-bottom: 1px solid #dbdbdb;
+}
+.reviews_table_type {
+    border-collapse: collapse;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination ul {
+    padding-top: 20px;
+}
+
+.pagination span {
+    padding: 4px 5px 1px 5px;
+    font-weight: bold;
+    border: 1px solid #777777;
+}
+
+.btn_reviews_box {
+    position: absolute;
+    top: 32px;
+    right: 0px;
+}
+
+.btn_reviews_more {
+    display: inline-block;
+    min-width: 140px;
+    padding: 10px;
+    font-weight: bold;
+    text-align: center;
+    border: 1px solid #404040;
+}
+
+.btn_reviews_write {
+    display: inline-block;
+    min-width: 140px;
+    padding: 10px;
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+    border: 1px solid #404040;
+    background-color: #404040;
+}
+
+/* 상품 Q&A CSS */
+.qna_cont {
+    position: relative;
+    padding-top: 20px;
+}
+
+.qna_cont h3 {
+    border-bottom: 1px solid black;
+}
+
+.qna_table {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.qna_table td {
+    width: 1200px;
+    height: 80px;
+    padding: 13px 10px 15px 18px;
+    border-bottom: 1px solid #dbdbdb;
+    text-align: center;
+}
+
+.btn_qna_box {
+    position: absolute;
+    top: 32px;
+    right: 0px;
+}
+
+.btn_qna_more {
+    display: inline-block;
+    min-width: 140px;
+    padding: 10px;
+    font-weight: bold;
+    text-align: center;
+    border: 1px solid #404040;
+}
+
+.btn_qna_write {
+    display: inline-block;
+    min-width: 140px;
+    padding: 10px;
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+    border: 1px solid #404040;
+    background-color: #404040;
+}
+
+.on {
+    border-bottom: 3px solid black;
+}
+

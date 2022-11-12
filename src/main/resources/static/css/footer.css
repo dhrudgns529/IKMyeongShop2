@@ -1,0 +1,108 @@
+#footer{
+    width: 100%;
+    height: 100px;
+}
+#footer .foot_top{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 54px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid gray;
+}
+#footer .foot_nav {
+    display: flex;
+    align-items: center;
+    width: 1200px;
+    height: 100%;
+}
+#footer .foot_nav li{
+    padding: 0px 16px 0px 18px;
+    font-size: 15px;
+    border-right: 1px solid gray;
+}
+#footer .foot_nav li:last-child{
+    border-right: 0px;
+}
+#footer .foot_nav1{
+    font-weight: 700;
+<<<<<<< HEAD
+}
+=======
+}
+#footer .foot_middle{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height:262px;
+}
+#footer .foot_main{
+    display: flex;
+    align-items: center;
+    width: 1200px;
+    height: 100%;
+
+}
+#footer .foot_main > div{
+    display: flex;
+    justify-content: center;
+    border-left: 1px solid gray;
+}
+#footer .main1{
+    display: flex;
+    flex-direction: column;
+    background-color: red;
+    align-items: center;
+    width: 300px;
+    height: 164px;
+    font-size: 29px;
+    font-weight: 700;
+}
+#footer .main1_1{
+    width: 227px;
+}
+#footer .top{
+    width: 227px;
+    height: 50px;
+    background-color: blue;
+}
+#footer p{
+    font-size: 12px;
+    font-weight: 100;
+}
+#footer .main2{
+    display: flex;
+    flex-direction: column;
+    background-color: red;
+    align-items: center;
+    width: 300px;
+    height: 164px;
+    font-size: 29px;
+    font-weight: 700;
+}
+#footer .main2 span{
+    font-size: 12px;
+}
+#footer .main3{
+    display: flex;
+    flex-direction: column;
+    background-color: red;
+    align-items: center;
+    width: 300px;
+    height: 164px;
+    font-size: 29px;
+    font-weight: 700;
+
+}
+#footer .main4{
+    display: flex;
+    flex-direction: column;
+    background-color: red;
+    align-items: center;
+    width: 300px;
+    height: 164px;
+    font-size: 29px;
+    font-weight: 700;
+    border-right: 1px solid gray;
+}
+>>>>>>> 1371447179a32432b95d3b5d517d1a2a79606009

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <link rel="stylesheet" href="/static/css/reset.css">
+    <link rel="stylesheet" href="/static/css/header.css">
+    <link rel="stylesheet" href="/static/css/admin/product_update.css">
+</head>
+<body>
+    <header id="header">
+        <div id="top">
+            <div class="sns">
+                <ul>
+                    <li><a href="https://www.facebook.com/ikmyeongshop" target="_blank"><img src="/static/img/header/top_btn_sns1.png" alt=""></a></li>
+                    <li><a href="https://www.instagram.com/anonymous_ikmsang/" target="_blank"><img src="/static/img/header/top_btn_sns2.png" alt=""></a></li>
+                </ul>
+                <ul>
+                    <li><a href="/account/login">로그인</a></li>
+                    <li><a href="/account/register">회원가입</a></li>
+                    <li><a href="/order/cart">장바구니0</a></li>
+                    <li><a href="/mypage/index">마이페이지</a></li>
+                    <li><a href="#">고객센터</a></li>
+                    <li><a href="#"><img src="/static/img/header/top_btn_search.png" alt=""></a></li>
+                </ul>
+            </div>
+            <div class="logo">
+                <a href="#"><img src="/static/img/header/event_left.png" alt=""></a>
+                <a href="/index"><img src="/static/img/header/logo.png" alt=""></a>
+                <a href="#"><img src="/static/img/header/event_right.png" alt=""></a>
+            </div>
+            <nav  class="nav">
+                <ul>
+                  <li><a href="/goods/DOll">DOLL</a></li>
+                  <li><a href="/goods/FIGURE&TOY">FIGURE & TOY</a></li>
+                  <li><a href="/goods/FANCY">FANCY</a></li>
+                  <li><a href="/goods/ACCESSORY">ACCESSORY</a></li>
+                  <li><a href="/goods/LIVING">LIVING</a></li>
+                  <li><a href="/goods/KITCHEN&BATHROOM">KITCHEN & BATHROOM</a></li>
+                  <li><a href="/goods/MOBILE">MOBILE</a></li>
+                  <li><a href="/goods/깨꾹이">깨꾹이</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div id="container">
+            <div class="location_cont">
+                <em><a class="local_home" href="/">HOME</a> > 관리자 페이지</em>
+             </div>
+            <div class="contents">
+                <div class="content-side">
+                    <h2 class="content-side-title">관리자 페이지</h2>
+                    <div class="side-content-menulist">상품정보
+                        <a class="side-content-menu" href="/">- 상품조회</a>
+                        <a class="side-content-menu" href="/admin/product/regist">- 상품등록</a>
+                    </div>
+                    <div class="side-content-menulist">로그아웃
+                        <a class="side-content-menu" href="/">- 로그아웃</a>
+                    </div>
+                </div>
+            <section class="admin-main">
+              <h2 class="admin-title">상품 수정</h2>
+              <div class="regist-header">
+
+              </div>  
+              <form enctype="multipart/form-data">
+                  <input type="file" class="files-input" name="files" multiple>
+                  </form>
+                  <button class="btn regist-button img-add-button">사진 등록</button>
+                  <ul class="old-file-list">
+
+                  </ul>
+                  <ul class="file-list">
+
+                  </ul>
+                  <button class="btn regist-button upload-button">상품 수정</button>
+            </section>
+
+            </div> 
+        </div>
+    </main>
+    <script src="/static/js/admin/product_update.js"></script>
+</body>
+</html>
